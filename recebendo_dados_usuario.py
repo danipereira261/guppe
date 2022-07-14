@@ -4,8 +4,7 @@ Recebendo dados do usuário
 
 """
 # Entrada de dados
-print("Qual seu nome?")
-nome = input()
+nome = input("Qual seu nome?")
 
 # Exemplo de print antigo Python 2.x
 # print("Seja bem vindo(a) %s" %nome)
@@ -15,8 +14,7 @@ nome = input()
 
 # Exemplo atual Python a partir da versão 3.7
 print(f" Seja bem vindo {nome}")
-print("Qual é a sua idade?")
-idade = input()
+idade = int(input("Qual é a sua idade?"))
 
 # Processamento
 
@@ -30,4 +28,5 @@ idade = input()
 # print("A {} tem {} anos ".format(nome, idade))
 
 # Exemplo atual Python a partir da versão 3.7
+print(f"A {nome} tem {idade} anos")
 print(f"A {nome} tem {idade} anos")
