@@ -87,12 +87,82 @@ print(lista1)
 print('************************************************')
 
 # Podemos facilmente inverter uma lista
-
 lista1.reverse()
 lista2.reverse()
 print(lista1)
 print(lista2)
 
-# slice faz a mesma coisa que o reverse
+# slice fazendo a mesma coisa que o reverse acima
 print(lista1[:: -1])
 print(lista2[:: -1])
+
+print('************************************************')
+
+# Copia e tamanho de lista
+lista7 = lista2.copy()
+print(len(lista7))
+
+print('************************************************')
+# Podemos remover facilmente o último elemento de uma lista, o pop retorna o elemento removido
+print(lista5)
+lista5.pop()
+print(lista5)
+
+# Podemos remover um elemento pelo indice, os elementos a direita serão deslocados para a esquerda
+print(lista5)
+lista5.pop(2)
+print(lista5)
+
+print('************************************************')
+
+# Podemos remover todos os elementos
+print(lista5)
+lista5.clear()
+print(lista5)
+
+print('************************************************')
+
+# Podemos facilmente repetir elementos em uma lista
+nova = [1, 2, 3]
+print(nova)
+nova = nova * 3
+print(nova)
+
+print('************************************************')
+
+# Podemos facilmente converter uma string para uma lista, por padrão separa os elementos pelo espaço entre eles.
+curso = 'Programação Python: Essencial'
+print(curso)
+curso = curso.split()
+print(curso)
+
+curso = 'Programação, Python, Essencial'
+print(curso)
+curso = curso.split(',')
+print(curso)
+
+print('************************************************')
+
+# Convertendo uma lista em uma string
+lista7 = ['Programação', 'Python:', 'Essencial']
+print(lista7)
+curso = ' '.join(lista7)
+print(curso)
+
+curso = '$'.join(lista7)
+print(curso)
+
+print('************************************************')
+
+# Podemos realmente colocar qualquer tipo de dado em uma lista, inclusive misturando esses dados
+
+lista8 = [1, 2.34, True, 'Geek', 'd', [1, 2, 3], 4534345345]
+print(lista8)
+print(type(lista8))
+
+print('************************************************')
+
+# Iterando sobre listas
+
+for elemento in lista8:
+    print(elemento)
