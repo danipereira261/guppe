@@ -166,3 +166,164 @@ print('************************************************')
 
 for elemento in lista8:
     print(elemento)
+
+carrinho = []
+produto = []
+
+while produto != 'sair':
+    print("Adicione um produto na lista ou digite 'sair' para sair: ")
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+
+for produto in carrinho:
+    print(produto)
+
+print('************************************************')
+
+# Fazemos acesso aos elementos de forma indexada
+
+cores = ['verde', 'amarelo', 'azul', 'branco']
+
+print(cores[0])
+print(cores[1])
+print(cores[2])
+print(cores[3])
+
+print('************************************************')
+
+# Fazer acesso aos elementos de forma inversa
+print(cores[-1])
+print(cores[-2])
+print(cores[-3])
+print(cores[-4])
+
+print('************************************************')
+for cor in cores:
+    print(cor)
+
+print('************************************************')
+
+indice = 0
+while indice < len(cores):
+    print(cores[indice])
+    indice = indice + 1
+
+print('************************************************')
+
+# Gerar indice em um for
+
+for k, v in enumerate(cores):
+    print(k, v)
+
+print('************************************************')
+
+# Gerar chave e valor em uma lista
+cores = list(enumerate(cores))
+print(cores)
+
+print('************************************************')
+# Encontrar o indice de um elemento na lista
+numeros = [5, 6, 7, 5, 8, 9, 10]
+# Em qual indice da lista está o o valor 6
+print(numeros.index(6))
+# Em qual indice da lista está o valor 9
+print(numeros.index(9))
+# Retorna o valor do primeiro elemento encontrado
+print(numeros.index(5))
+# Podemos fazer a busca dentro de um range, ou seja, qual indice começar a buscar
+print(numeros.index(5, 1))  # buscando a partir do indice 1
+# Podemos fazer dentro de um range, inicio/fim
+print(numeros.index(8, 3, 6))  # buscar o indice do valor 8, entre os indices 3 a 6
+
+print('************************************************')
+# Revisao de slicing
+# lista[inicio:fim:passo]
+# Trabalhando com slice de listas com o parametro 'inicio'
+
+print('************************************************')
+lista = [1, 2, 3, 4]
+print(lista[1:])  # Iniciando no indice 1 e pegando todos os elementos restantes
+
+# Trabalhando com slice de lista com o parametro 'fim'
+print(lista[:2])  # Começa em 0, pega até o indice 2 -1
+
+# Trabalhando com slice de lista com o parametro 'passo'
+print(lista[1::2])  # Começa em 1, vai até o final, de 2 em dois
+
+print('************************************************')
+# Invertendo valores em uma lista
+nomes = ['Geek', 'University']
+nomes[0], nomes[1] = nomes[1], nomes[0]
+print(nomes)
+# melhor forma de fazer
+nomes = ['Geek', 'University']
+nomes.reverse()
+print(nomes)
+
+print('************************************************')
+
+# Soma*, Valor Maximo*, Valor Minimoo*, Tamanho
+# * Se os valores forem todos inteiros ou reais.
+lista = [1, 2, 3, 4, 5, 6]
+print(sum(lista))  # soma
+print(max(lista))  # máximo valor
+print(min(lista))  # minimo valor
+print(len(lista))  # tamanho de lista
+
+print('************************************************')
+# Transformar uma lista em tupla
+lista = [1, 2, 3, 4, 5, 6]
+print(lista)
+print(type(lista))
+
+tupla = tuple(lista)
+print(type(tupla))
+
+# Desempacotamento de listas
+
+lista = [1, 2, 3]
+num1, num2, num3 = lista
+print(num1)
+print(num2)
+print(num3)
+
+print('************************************************')
+
+# Copiando uma lista para outra (Shallow Copy e Deep Copy)
+# Forma 1 - Deep Copy
+
+"""
+Veja que ao utilizarmos lista.copy() copiamos os dados da lista para uma nova lista, mas elas ficaram totalmente
+independentes, ou seja, modificando uma lista, não afeta a outra. Isso em Python é chamado de Deep Copy (cópia profunda)
+"""
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista.copy()
+
+print(nova)
+
+nova.append(4)
+
+print(lista)
+print(nova)
+
+# Forma 2 - Shallow Copy
+
+lista_teste = [1, 2, 3]
+print(lista_teste)
+
+nova_teste = lista_teste
+print(nova)
+
+nova_teste.append(4)
+
+print(lista_teste)
+print(nova_teste)
+
+"""
+Veja que utilizamos a cópia via atribuição e copiamos os dados da lista para a nova lista, mas após realizar 
+a modificação em uma das listas, essa modificação se refletiu em ambas as listas. 
+Isso em Python é chamado de Shallow Copy.
+"""
