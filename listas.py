@@ -315,7 +315,7 @@ lista_teste = [1, 2, 3]
 print(lista_teste)
 
 nova_teste = lista_teste
-print(nova)
+print(nova_teste)
 
 nova_teste.append(4)
 
