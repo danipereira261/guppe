@@ -18,3 +18,6 @@ if __name__ == '__main__':
     calc(1, 2)
     n('Felipe')
     teste('geek')
+
+
+

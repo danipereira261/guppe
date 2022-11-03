@@ -60,3 +60,86 @@ localidades = {(35.6895, 39.6917): 'Escritório em Tókio',
 print(localidades)
 print(type(localidades))
 print('**************************************************************')
+
+# Adicionar elementos em um dicionário
+
+receita = {"jan": 100, "fev": 120, "mar": 300}
+print(receita)
+print(type(receita))
+
+# Forma 1  -mais comum
+receita["abr"] = 350
+print(receita)
+
+# Forma 2
+receita.update({"mai": 500})
+print(receita)
+
+# update serve tanto para incluir quanto para alterar
+# dicionários não aceitam chaves repetidas
+
+# Remover dados de um dicionário
+receita = {"jan": 100, "fev": 120, "mar": 300}
+print(receita)
+# Forma 1
+ret = receita.pop('mar')
+print(ret)
+print(receita)
+
+# OBS: Aqui precisamos informar a chave, e caso não encontre o elemento, um KeyError é retornado.
+# OBS: Ao removermos um objeto, o valor deste objeto é sempre retornado.
+
+# Forma 2
+del receita['fev']
+print(receita)
+# OBS: Neste caso o valor removido não é retornado
+
+# Dicionário dentro de lista, desta forma facilmente adicionamos ou removemos produtos no carrinho
+carrinho = []
+produto1 = {'nome': 'Playstation 4', 'quantidade': 1, 'preco': 2300.00}
+produto2 = {'nome': 'God of War', 'quantidade': 1, 'preco': 150.00}
+carrinho.append(produto1)
+carrinho.append(produto2)
+print(carrinho)
+
+# Métodos de dicionários
+d = dict(a=1, b=2, c=3)
+print(d)
+print(type(d))
+
+# Limpar o dicionário (zerar dados)
+#d.clear()
+#print(d)
+
+# Copiando um dicionário para outro
+# Forma 1 Deep Copy
+#novo = d.copy()
+#print(novo)
+#novo['d'] = 4
+#print(d)
+#print(novo)
+
+# Forma 2 Shallow Copy
+#novo = d
+#print(novo)
+#novo['d'] = 4
+#print(d)
+#print(novo)
+
+# Forma não usual de criar dicionários
+
+outro = {}.fromkeys('a', 'b')
+print(outro)
+print(type(outro))
+
+usuario = {}.fromkeys(['nome', 'pontos', 'email', 'profile'], 'desconhecido')
+print(usuario)
+print(type(usuario))
+
+# O metodo fromkeys recebem dois parâmetros: um iterável e um valor.
+# Ele vai gerar para cada valor do iterável uma chave e irá atribuir a esta chave o valor informado
+
+
+
+
+
