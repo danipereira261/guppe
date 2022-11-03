@@ -2,7 +2,7 @@
 Conjuntos
 
 - Conjuntos em qualquer linguagem de programação, estamos fazendo referência á Teoria dos Conjuntos da Matemática.
-- Aqui no Pynthon os Conjuntos são chamados de Sets.
+- Aqui no Python os Conjuntos são chamados de Sets.
 Disto isto, da mesma forma que na matemática:
 - Sets (conjuntos) não possuem valores duplicados;
 - Sets (conjuntos) não possuem valores ordenados;
