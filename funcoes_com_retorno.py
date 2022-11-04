@@ -1,4 +1,6 @@
 from random import random
+from datetime import *
+import time
 
 """
 Funções com retorno
@@ -47,3 +49,12 @@ def joga_moeda():
 
 
 print(joga_moeda())
+
+
+def start_process():
+    dh_inic_exec_process = str(time.strftime('%d%m%Y %H:%M:%S'))
+    dh_fim_exec_proc = str(time.strftime('%d%m%Y %H:%M:%S'))
+    return f'Começou em: {dh_inic_exec_process} Terminou em: {dh_fim_exec_proc}'
+
+
+print(start_process())
