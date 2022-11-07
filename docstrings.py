@@ -10,7 +10,7 @@ Podemos ainda fazer acesso a documentação com a função help()
 
 def diz_oi():
     """ Uma função simples que retorna a string 'Oi!'"""
-    return f'Oi!'
+    return 'Oi!'
 
 
 print(diz_oi())
