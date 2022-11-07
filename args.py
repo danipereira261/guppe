@@ -49,6 +49,6 @@ numeros = [1, 2, 3, 4, 5, 6, 7]
 
 print(soma_todos_numeros(*numeros))
 
-# OBS: O asterico serve para que informemos ao Python que estamos passando
+# OBS: O * asterico serve para que informemos ao Python que estamos passando
 # como argumento uma coleção de dados. Desta forma, ele saberá
 # que precisará antes desempacotar esses dados.
